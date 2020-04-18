@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>网站头部</h1>
+        商家组件
     </div>
 </template>
 

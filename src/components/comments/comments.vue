@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>网站头部</h1>
+        点评组件
     </div>
 </template>
 

@@ -1,21 +1,38 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Header from "./../components/Header/Header.vue";
+import Header from "components/header/header";
+import Goods from 'components/goods/goods';
+import Comments from 'components/comments/comments'
+import Seller from 'components/seller/seller'
 
 Vue.use(VueRouter);
 
-const routes = [
+const routes = [{
+    path: '/',
+    redirect: '/goods'
+  },
   {
-    path: "/",
-    name: "Header",
-    component: Header
+    path: '/goods',
+    name: 'Goods',
+    component: Goods
+  },
+  {
+    path: '/comments',
+    name: 'Comments',
+    component: Comments
+  },
+  {
+    path: '/seller',
+    name: 'Seller',
+    component: Seller
   }
 ];
 
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes
+  routes,
+  linkActiveClass: 'active'
 });
 
 export default router;
